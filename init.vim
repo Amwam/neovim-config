@@ -49,6 +49,10 @@ autocmd BufWritePre *.{py,h,c,java,rs,js,json,php} :%s/\s\+$//e
 " Run Neomake on buffer changes
 autocmd! BufWritePost,BufEnter * Neomake
 
+"don't use vims backup swapfiles
+set nobackup
+set noswapfile
+
 " enables :Paste to just do what you want
 command Paste execute 'set noai | insert | set ai'
 
