@@ -70,6 +70,9 @@ Plug 'benekastah/neomake'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 " Neomake configuration
@@ -88,3 +91,10 @@ let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 if executable('ag') " may need to install the_silver_searcher via brew
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
+
+" Nerd tree with Cntrl-N
+map <C-n> :NERDTreeToggle<CR>
+
+" NerdTree ignore certain file types (array of regular expressions
+let NERDTreeIgnore = ['\.pyc$', '.DS_Store$', '.git/*', '.idea/*']
+let NERDTreeShowHidden=1
