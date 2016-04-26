@@ -15,9 +15,9 @@ autocmd InsertLeave * :set relativenumber
 set autoindent " always set autoindenting on
 set copyindent " copy the previous indentation on autoindenting
 
-" Force the use of hjkl
-map <up> <nop>
-map <down> <nop>
+" Use up and down to switch tabs
+map <up> <esc>:tabnext<CR>
+map <down> <esc>:tabprevious<CR>
 
 " Use left and right to switch buffers
 map <left> :bprevious<CR>
@@ -62,6 +62,8 @@ set clipboard=unnamed
 " Ack searching
 nmap <leader>a <Esc>:Ack! <space>
 
+"neovim terminal settings
+:tnoremap <Esc> <C-\><C-n>
 
 call plug#begin('~/.vim/plugged')
 Plug 'benekastah/neomake'
