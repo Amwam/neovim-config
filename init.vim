@@ -65,6 +65,7 @@ nmap <leader>a <Esc>:Ack! <space>
 
 call plug#begin('~/.vim/plugged')
 Plug 'benekastah/neomake'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 " Neomake configuration
@@ -73,3 +74,13 @@ let g:eslint_path = system('PATH=$(npm bin):$PATH && which eslint')
 let g:neomake_javascript_eslint_exe=substitute(g:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
 
 let g:neomake_javascript_enabled_makers = ['eslint']	
+
+" ctrlp configuration
+let g:ctrlp_custom_ignore = 'node_modules\|.git\|pyc$'
+nnoremap <leader>. :CtrlPTag<cr>
+
+" Speed up ctrlp by using a cache dir
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag') " may need to install the_silver_searcher via brew
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
