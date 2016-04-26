@@ -74,6 +74,13 @@ Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ludovicchabant/vim-gutentags'
+
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'zchee/deoplete-jedi'
+
 call plug#end()
 
 " Neomake configuration
@@ -102,3 +109,7 @@ let NERDTreeShowHidden=1
 
 let g:gutentags_exclude = ['.git', '.idea', 'node_modules']
 set tags=./tags;
+
+" Use deoplete
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#jedi#show_docstring = 1
