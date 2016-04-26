@@ -68,6 +68,8 @@ nmap <leader>a <Esc>:Ack! <space>
 call plug#begin('~/.vim/plugged')
 Plug 'benekastah/neomake'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Neomake configuration
