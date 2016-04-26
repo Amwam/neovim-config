@@ -73,6 +73,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
 " Neomake configuration
@@ -98,3 +99,6 @@ map <C-n> :NERDTreeToggle<CR>
 " NerdTree ignore certain file types (array of regular expressions
 let NERDTreeIgnore = ['\.pyc$', '.DS_Store$', '.git/*', '.idea/*']
 let NERDTreeShowHidden=1
+
+let g:gutentags_exclude = ['.git', '.idea', 'node_modules']
+set tags=./tags;
