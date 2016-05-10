@@ -27,7 +27,7 @@ map <right> :bnext<CR>
 au InsertLeave * if &mod && expand('%')!=''|write|endif
 
 " Write file on focus lost
-au FocusLost * :wa
+au FocusLost * silent! :wa
 
 set textwidth=150 " default text width, purposly high just in case
 
@@ -65,6 +65,9 @@ nmap <leader>a <Esc>:Ack! <space>
 "neovim terminal settings
 :tnoremap <Esc> <C-\><C-n>
 
+" Run JS Tests on Shift-F10
+nnoremap <F10> :!mocha --require tests/setup.js --recursive ./tests<CR>
+
 call plug#begin('~/.vim/plugged')
 Plug 'benekastah/neomake'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -74,6 +77,11 @@ Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'vim-javascript'
+
+" Color scheme
+Plug 'lifepillar/vim-wwdc16-theme'
+Plug 'sickill/vim-monokai'
 
 function! DoRemote(arg)
   UpdateRemotePlugins
@@ -83,12 +91,19 @@ Plug 'zchee/deoplete-jedi'
 
 call plug#end()
 
+"Color scheme
+colo monokai
+
 " Neomake configuration
-let g:neomake_python_enabled_makers = ['pyflakes']
+let g:neomake_python_enabled_makers = ['flake8']
 let g:eslint_path = system('PATH=$(npm bin):$PATH && which eslint')
 let g:neomake_javascript_eslint_exe=substitute(g:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
 
 let g:neomake_javascript_enabled_makers = ['eslint']	
+
+" Open the list when there are errors
+" 2 keeps the cursor position in place
+let g:neomake_open_list = 2
 
 " ctrlp configuration
 let g:ctrlp_custom_ignore = 'node_modules\|.git\|pyc$'
