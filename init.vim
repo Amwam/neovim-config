@@ -31,6 +31,9 @@ au FocusLost * silent! :wa
 
 set textwidth=150 " default text width, purposly high just in case
 
+autocmd FileType python set colorcolumn=100
+autocmd FileType javascript set colorcolumn=100
+
 " Tab options
 set expandtab " Insert spaces instead of tabs
 set tabstop=4 " 4 spaces for every tab
