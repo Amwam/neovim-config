@@ -85,6 +85,8 @@ Plug 'vim-javascript'
 Plug 'hashivim/vim-terraform'
 Plug 'hynek/vim-python-pep8-indent'
 
+Plug 'easymotion/vim-easymotion'
+
 Plug 'mxw/vim-jsx'
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
