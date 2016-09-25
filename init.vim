@@ -88,6 +88,8 @@ Plug 'hynek/vim-python-pep8-indent'
 " Color scheme
 Plug 'lifepillar/vim-wwdc16-theme'
 Plug 'sickill/vim-monokai'
+Plug 'altercation/vim-colors-solarized'
+Plug 'rakr/vim-one'
 
 function! DoRemote(arg)
   UpdateRemotePlugins
@@ -99,6 +101,9 @@ Plug 'davidhalter/jedi-vim'
 call plug#end()
 
 "Color scheme
+"colo monokai
+set background=dark
+let g:solarized_termcolors=256
 colo monokai
 
 " Neomake configuration
