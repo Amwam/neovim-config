@@ -85,10 +85,18 @@ Plug 'vim-javascript'
 Plug 'hashivim/vim-terraform'
 Plug 'hynek/vim-python-pep8-indent'
 
+Plug 'mxw/vim-jsx'
+  let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
+Plug 'elzr/vim-json'
+  let g:vim_json_syntax_conceal = 0
+
 " Color scheme
 Plug 'lifepillar/vim-wwdc16-theme'
 Plug 'sickill/vim-monokai'
 Plug 'altercation/vim-colors-solarized'
+let g:solarized_termcolors=256
+
 Plug 'rakr/vim-one'
 
 function! DoRemote(arg)
@@ -103,7 +111,6 @@ call plug#end()
 "Color scheme
 "colo monokai
 set background=dark
-let g:solarized_termcolors=256
 colo monokai
 
 " Neomake configuration
