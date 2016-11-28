@@ -175,7 +175,7 @@ endif
 let g:neomake_open_list = 2
 
 " ctrlp configuration
-let g:ctrlp_custom_ignore = 'node_modules\|.git\|pyc$'
+let g:ctrlp_custom_ignore = 'migration\|data\|build\|node_modules\|.git\|pyc$'
 nnoremap <leader>. :CtrlPTag<cr>
 
 " Speed up ctrlp by using a cache dir
@@ -191,7 +191,7 @@ map <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$', '.DS_Store$', '.git/*', '.idea/*']
 let NERDTreeShowHidden=1
 
-let g:gutentags_exclude = ['.git', '.idea', 'node_modules']
+let g:gutentags_exclude = ['.git', '.idea', 'node_modules', 'migration', 'data', 'build']
 set tags=./tags;
 
 " Use deoplete
