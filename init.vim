@@ -82,7 +82,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'benekastah/neomake'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
+
 Plug 'tpope/vim-fugitive'
+set diffopt=vertical " side by side diffs
+
 Plug 'tpope/vim-commentary'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
