@@ -23,6 +23,13 @@ map <down> <esc>:tabprevious<CR>
 map <left> :bprevious<CR>
 map <right> :bnext<CR>
 
+"Folding
+set foldmethod=indent
+set foldlevelstart=20 " Keep folds open, when opening a buffer
+nnoremap <space> za
+vnoremap <space> zf
+
+
 " Write the file if there is a change, on exiting insert mode
 au InsertLeave * if &mod && expand('%')!=''|write|endif
 
