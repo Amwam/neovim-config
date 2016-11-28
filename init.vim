@@ -118,7 +118,8 @@ let g:solarized_termcolors=256
 Plug 'joshdick/onedark.vim'
 
 Plug 'rakr/vim-one'
-
+Plug 'Yggdroot/indentLine'
+let g:indentLine_color_term = 251
 function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
