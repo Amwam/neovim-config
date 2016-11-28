@@ -92,6 +92,13 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'vim-javascript'
+
+Plug 'jelera/vim-javascript-syntax'
+" Highlight ES6 template strings
+hi link javaScriptTemplateDelim String
+hi link javaScriptTemplateVar Text
+hi link javaScriptTemplateString String
+
 Plug 'hashivim/vim-terraform'
 Plug 'hynek/vim-python-pep8-indent'
 
@@ -135,7 +142,7 @@ function! StrTrim(txt)
 endfunction
 
 let g:neomake_javascript_enabled_makers = ['eslint']
-
+let g:neomake_jsx_enabled_makers = ['eslint']
 let g:flow_path = StrTrim(system('PATH=$(npm bin):$PATH && which flow'))
 
 if findfile('.flowconfig', '.;') !=# ''
@@ -147,7 +154,15 @@ if findfile('.flowconfig', '.;') !=# ''
           \ 'errorformat': '%E%f:%l:%c\,%n: %m',
           \ 'cwd': '%:p:h' 
           \ }
+
+    let g:neomake_jsx_flow_maker = {
+          \ 'exe': 'sh',
+          \ 'args': ['-c', g:flow_path.' --json 2> /dev/null | flow-vim-quickfix'],
+          \ 'errorformat': '%E%f:%l:%c\,%n: %m',
+          \ 'cwd': '%:p:h' 
+          \ }
     let g:neomake_javascript_enabled_makers = g:neomake_javascript_enabled_makers + [ 'flow']
+    let g:neomake_jsx_enabled_makers = g:neomake_jsx_enabled_makers + [ 'flow']
   endif
 endif
 
