@@ -115,6 +115,7 @@ Plug 'lifepillar/vim-wwdc16-theme'
 Plug 'sickill/vim-monokai'
 Plug 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
+Plug 'joshdick/onedark.vim'
 
 Plug 'rakr/vim-one'
 
@@ -130,7 +131,7 @@ call plug#end()
 "Color scheme
 "colo monokai
 set background=dark
-colo monokai
+colo onedark
 
 " Neomake configuration
 let g:neomake_python_enabled_makers = ['flake8']
