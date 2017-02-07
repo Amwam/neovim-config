@@ -85,6 +85,7 @@ Plug 'benekastah/neomake'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 
+Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 set diffopt=vertical " side by side diffs
 
@@ -94,6 +95,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'vim-javascript'
+Plug 'craigdallimore/vim-jest-cli'
+" Run :Jest to run jest tests
+command Jest Dispatch jest 
 
 Plug 'jelera/vim-javascript-syntax'
 " Highlight ES6 template strings
@@ -107,7 +111,7 @@ Plug 'hynek/vim-python-pep8-indent'
 Plug 'easymotion/vim-easymotion'
 
 Plug 'mxw/vim-jsx'
-  let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 Plug 'elzr/vim-json'
   let g:vim_json_syntax_conceal = 0
