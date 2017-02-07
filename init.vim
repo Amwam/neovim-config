@@ -29,6 +29,8 @@ set foldlevelstart=20 " Keep folds open, when opening a buffer
 nnoremap <space> za
 vnoremap <space> zf
 
+set inccommand=split
+set gdefault " Global subsitute by default
 
 " Write the file if there is a change, on exiting insert mode
 au InsertLeave * if &mod && expand('%')!=''|write|endif
