@@ -38,7 +38,7 @@ au InsertLeave * if &mod && expand('%')!=''|write|endif
 " Write file on focus lost
 au FocusLost * silent! :wa
 
-set textwidth=150 " default text width, purposly high just in case
+set textwidth=1000 " default text width, purposly high just in case
 
 autocmd FileType python set colorcolumn=100
 autocmd FileType javascript set colorcolumn=100
