@@ -56,6 +56,8 @@ set incsearch "Highlight as you search
 set ignorecase "ignore case when seaching
 set smartcase "Ignores case, except when capitals are used
 
+set cursorline " Highlight current line
+
 " Trim trailing whitespace on save, for specified file types only
 autocmd BufWritePre *.{py,h,c,java,rs,js,json,php} :%s/\s\+$//e
 
