@@ -47,6 +47,7 @@ autocmd FileType javascript set colorcolumn=100
 set expandtab " Insert spaces instead of tabs
 set tabstop=4 " 4 spaces for every tab
 set shiftwidth=4
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 " Two spaces for JS
 
 set bs=2 " make backspace behave like normal again
 
