@@ -194,7 +194,7 @@ endif
 let g:neomake_open_list = 2
 
 " ctrlp configuration
-let g:ctrlp_custom_ignore = 'migration\|data\|build\|node_modules\|.git\|pyc$'
+let g:ctrlp_custom_ignore = 'migration\|data\|build\|node_modules\|.git\|pyc$|coverage\'
 nnoremap <leader>. :CtrlPTag<cr>
 
 " Speed up ctrlp by using a cache dir
