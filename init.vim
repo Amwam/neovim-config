@@ -144,6 +144,9 @@ Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'zchee/deoplete-jedi'
 Plug 'davidhalter/jedi-vim'
 
+Plug 'yuttie/comfortable-motion.vim'
+let g:comfortable_motion_air_drag = 1.0
+
 Plug 'keith/swift.vim'
 
 call plug#end()
