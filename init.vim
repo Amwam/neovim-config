@@ -20,8 +20,8 @@ map <up> <esc>:tabnext<CR>
 map <down> <esc>:tabprevious<CR>
 
 " Use left and right to switch buffers
-map <left> :bprevious<CR>
-map <right> :bnext<CR>
+map <left>  <c-O>
+map <right> <c-I>
 
 "Folding
 set foldmethod=indent
