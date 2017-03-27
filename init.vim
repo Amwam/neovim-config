@@ -85,6 +85,7 @@ nnoremap <F10> :!mocha --require tests/setup.js --recursive ./tests<CR>
 
 call plug#begin('~/.vim/plugged')
 Plug 'benekastah/neomake'
+Plug 'ervandew/supertab'
 Plug 'sbdchd/neoformat'
 nnoremap <leader>= :Neoformat<CR>
 
