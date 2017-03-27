@@ -144,6 +144,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'zchee/deoplete-jedi'
 Plug 'davidhalter/jedi-vim'
 
+Plug 'keith/swift.vim'
+
 call plug#end()
 
 "Color scheme
