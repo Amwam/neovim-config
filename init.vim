@@ -210,7 +210,7 @@ map <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$', '.DS_Store$', '.git/*', '.idea/*']
 let NERDTreeShowHidden=1
 
-let g:gutentags_ctags_exclude = ['.git', '.idea', 'node_modules', 'migration', 'data', 'build']
+let g:gutentags_ctags_exclude = ['.git', '.idea', 'node_modules', 'migration', 'data', 'build', 'coverage']
 set tags=./tags;
 
 " Use deoplete
