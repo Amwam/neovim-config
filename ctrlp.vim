@@ -1,6 +1,6 @@
 " ctrlp config
 
-let g:ctrlp_custom_ignore = 'migration\|data\|build\|node_modules\|.git\|pyc$|coverage\'
+let g:ctrlp_custom_ignore = '(migration|data|build|node_modules|.git|pyc$|coverage)'
 nnoremap <leader>. :CtrlPTag<cr>
 
 " Speed up ctrlp by using a cache dir

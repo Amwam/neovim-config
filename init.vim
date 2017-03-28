@@ -85,6 +85,8 @@ Plug 'sbdchd/neoformat'
 source ~/.config/nvim/neoformat.vim
 
 Plug 'ctrlpvim/ctrlp.vim'
+source ~/.config/nvim/ctrlp.vim
+
 Plug 'airblade/vim-gitgutter'
 
 Plug 'tpope/vim-dispatch'
