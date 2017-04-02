@@ -94,8 +94,15 @@ Plug 'tpope/vim-fugitive'
 set diffopt=vertical " side by side diffs
 
 Plug 'tpope/vim-commentary'
+
 Plug 'mileszs/ack.vim'
 nmap <leader>a <Esc>:Ack! <space>
+" Use the_silver_searcher if it is installed for faster searching, instead of ack
+if executable('ag')
+    let g:ackprg = 'ag --nogroup --nocolor --column' " Use the_silver_searcher instead
+else
+    echo "Install 'the_silver_searcher' for faster searching, falling back to 'ack'"
+endif
 
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
