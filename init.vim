@@ -6,11 +6,6 @@ set title " Change the terminal title
 
 let mapleader = " "
 
-" When not in insert mode, use normal line numbers, Write mode for relative
-autocmd InsertEnter * :set norelativenumber
-autocmd InsertEnter * :set number
-autocmd InsertLeave * :set relativenumber
-
 set autoindent " always set autoindenting on
 set copyindent " copy the previous indentation on autoindenting
 
