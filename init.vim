@@ -160,3 +160,4 @@ set background=dark
 colo onedark
 
 source ~/.config/nvim/functions.vim
+silent! so .vimlocal " Load an optional localvim file
