@@ -107,7 +107,7 @@ Plug 'ludovicchabant/vim-gutentags'
 let g:gutentags_ctags_exclude = ['.git', '.idea', 'node_modules', 'migration', 'data', 'build', 'coverage']
 set tags=./tags;
 
-Plug 'vim-javascript'
+Plug 'vim-scripts/vim-javascript'
 Plug 'craigdallimore/vim-jest-cli'
 " Run :Jest to run jest tests
 command Jest Dispatch jest 
@@ -142,11 +142,16 @@ Plug 'davidhalter/jedi-vim'
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#jedi#show_docstring = 1
 let g:jedi#completions_enabled = 0 " disable jedi-vim completion
+let g:jedi#smart_auto_mappings = 0 " disbale auto insert of 'import' when using 'from x ...'
+let g:jedi#show_call_signatures_delay = 50 " ms to show the tooltip
 
 Plug 'yuttie/comfortable-motion.vim'
 let g:comfortable_motion_air_drag = 1.0
 
 Plug 'keith/swift.vim'
+
+" Show indent markers
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
