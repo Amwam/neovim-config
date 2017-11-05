@@ -76,6 +76,7 @@ Plug 'benekastah/neomake'
 source ~/.config/nvim/neomake.vim
 
 Plug 'ervandew/supertab'
+let g:SuperTabDefaultCompletionType = "<c-n>" " Start at the top of the results
 
 Plug 'sbdchd/neoformat'
 source ~/.config/nvim/neoformat.vim
