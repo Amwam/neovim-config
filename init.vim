@@ -6,6 +6,8 @@ set title " Change the terminal title
 
 let mapleader = " "
 
+set mouse=a " Mouse support
+
 set autoindent " always set autoindenting on
 set copyindent " copy the previous indentation on autoindenting
 
