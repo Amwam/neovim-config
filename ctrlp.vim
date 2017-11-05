@@ -2,6 +2,7 @@
 
 let g:ctrlp_custom_ignore = '(migration|data|build|node_modules|.git|pyc$|coverage)'
 nnoremap <leader>. :CtrlPTag<cr>
+nnoremap <leader>b :CtrlPBufTag<cr>
 
 " Speed up ctrlp by using a cache dir
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
