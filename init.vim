@@ -110,7 +110,6 @@ Plug 'ludovicchabant/vim-gutentags'
 let g:gutentags_ctags_exclude = ['.git', '.idea', 'node_modules', 'migration', 'data', 'build', 'coverage']
 set tags=./tags;
 
-Plug 'vim-scripts/vim-javascript'
 Plug 'craigdallimore/vim-jest-cli'
 " Run :Jest to run jest tests
 command Jest Dispatch jest 
@@ -126,8 +125,6 @@ Plug 'hynek/vim-python-pep8-indent'
 
 Plug 'easymotion/vim-easymotion'
 
-Plug 'mxw/vim-jsx'
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 Plug 'elzr/vim-json'
 let g:vim_json_syntax_conceal = 0
