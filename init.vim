@@ -71,6 +71,10 @@ set clipboard=unnamed
 " neovim terminal settings
 :tnoremap <Esc> <C-\><C-n>
 
+" pyenv setup
+let g:python_host_prog = '/Users/amit/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/Users/amit/.pyenv/versions/neovim3/bin/python'
+
 call plug#begin('~/.vim/plugged')
 Plug 'benekastah/neomake'
 source ~/.config/nvim/neomake.vim
@@ -144,9 +148,6 @@ let g:deoplete#sources#jedi#show_docstring = 1
 let g:jedi#completions_enabled = 0 " disable jedi-vim completion
 let g:jedi#smart_auto_mappings = 0 " disbale auto insert of 'import' when using 'from x ...'
 let g:jedi#show_call_signatures_delay = 50 " ms to show the tooltip
-
-Plug 'yuttie/comfortable-motion.vim'
-let g:comfortable_motion_air_drag = 1.0
 
 Plug 'keith/swift.vim'
 
