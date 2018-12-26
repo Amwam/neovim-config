@@ -27,7 +27,12 @@ vnoremap <space> zf
 
 set inccommand=split
 set gdefault " Global subsitute by default
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
+function! ExecuteMacroOverVisualRange()
+      echo "@".getcmdline()
+        execute ":'<,'>normal @".nr2char(getchar())
+    endfunction
 " Write the file if there is a change, on exiting insert mode
 au InsertLeave * if &mod && expand('%')!=''|write|endif
 
@@ -70,6 +75,9 @@ set clipboard=unnamed
 
 " neovim terminal settings
 :tnoremap <Esc> <C-\><C-n>
+
+" Redraw after macros are finished
+:set lazyredraw
 
 " pyenv setup
 let g:python_host_prog = '/Users/amit/.pyenv/versions/neovim2/bin/python'
@@ -119,6 +127,7 @@ Plug 'craigdallimore/vim-jest-cli'
 command Jest Dispatch jest 
 
 Plug 'jelera/vim-javascript-syntax'
+Plug 'leafgarland/typescript-vim'
 " Highlight ES6 template strings
 hi link javaScriptTemplateDelim String
 hi link javaScriptTemplateVar Text
