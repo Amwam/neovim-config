@@ -160,6 +160,11 @@ let g:jedi#show_call_signatures_delay = 50 " ms to show the tooltip
 
 Plug 'keith/swift.vim'
 
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+
 " Show indent markers
 Plug 'Yggdroot/indentLine'
 
